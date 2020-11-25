@@ -11,6 +11,7 @@ class DialogController {
   }
 
   index = (req: any, res: any): void => {
+    console.log(req.user._id);
     const userId = req.user._id;
 
     DialogModel.find()

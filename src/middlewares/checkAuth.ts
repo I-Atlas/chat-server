@@ -1,12 +1,7 @@
-import express from "express";
 import { verifyJWTToken } from "../utils";
 import { DecodedData } from "../utils/verifyJWTToken";
 
-export default (
-  req: any,
-  res: any,
-  next: express.NextFunction
-): void => {
+export default (req: any, res: any, next: any): void => {
   if (
     req.path === "/user/signin" ||
     req.path === "/user/signup" ||

@@ -9,11 +9,10 @@
   <body>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js"></script>
     <script>
-      window.onload = function() {
+      window.onload = function () {
         var socket = io("http://localhost:3000");
-
         window.socket = socket;
-        socket.on("SERVER:NEW_MESSAGE", function(msg) {
+        socket.on("SERVER:NEW_MESSAGE", function (msg) {
           if (window.user !== msg.user) {
             console.log(msg);
           }

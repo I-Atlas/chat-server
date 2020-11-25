@@ -29,6 +29,7 @@ class UserController {
   };
 
   getMe = (req: any, res: any): void => {
+    console.log(req.user._id);
     const id: string = req.user && req.user._id;
     UserModel.findById(id, (err: any, user: IUser) => {
       if (err || !user) {

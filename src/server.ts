@@ -1,6 +1,8 @@
 import express from "express";
 import { createServer } from "http";
+import dotenv from "dotenv";
 
+dotenv.config();
 // core/db - mongoose connect
 import "./core/db";
 import createRoutes from "./core/routes";
@@ -12,7 +14,7 @@ const io = createSocket(http);
 
 createRoutes(app, io);
 
-const PORT = 5000;
+const PORT = 3003;
 
 const start = () => {
   try {

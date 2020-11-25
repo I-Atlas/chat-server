@@ -1,7 +1,6 @@
-// declare namespace Express {
-//   import { IUser } from "./models/User";
-
-//   export interface Request {
-//     user?: IUser;
-//   }
-// }
+import { IUser } from "./models/User";
+declare namespace Express {
+  export interface Request {
+    user?: IUser;
+  }
+}

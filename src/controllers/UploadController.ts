@@ -1,11 +1,10 @@
-import express from "express";
-
 import cloudinary from "../core/cloudinary";
 import { UploadFileModel } from "../models";
 import { IUploadFile, IUploadFileDocument } from "../models/UploadFile";
 
 class UserController {
   create = (req: any, res: any): void => {
+    console.log(req.user._id);
     const userId: string = req.user._id;
     const file: any = req.file;
 

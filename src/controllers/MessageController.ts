@@ -1,4 +1,4 @@
-import express from "express";
+
 import socket from "socket.io";
 
 import { MessageModel, DialogModel } from "../models";
@@ -36,6 +36,7 @@ class MessageController {
   };
 
   index = (req: any, res: any): void => {
+    console.log(req.user._id);
     const dialogId: string = req.query.dialog;
     const userId: string = req.user._id;
 

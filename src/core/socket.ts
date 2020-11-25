@@ -4,7 +4,6 @@ import http from 'http';
 export default (http: http.Server) => {
   // @ts-ignore
   const io = socket(http);
-
   io.on('connection', function(socket: any) {
     socket.on('DIALOGS:JOIN', (dialogId: string) => {
       socket.dialogId = dialogId;
